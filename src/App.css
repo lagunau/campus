@@ -1,0 +1,70 @@
+.App {
+  text-align: center;
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel .slide iframe {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  object-fit: fill;
+  /* transform: translate(-50%, -50%); */
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .wrapper {
+    width: calc(100%);
+    height: 56.25vw;
+  }
+  .carousel .slide iframe {
+    height: 56.25vw;
+    width: 100%;
+    margin: 0;
+  }
+}
+@media (min-aspect-ratio: 16/9) {
+  .carousel .slide iframe {
+    width: 177.78vh;
+    height: 100vh;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #ffffff;
+  min-height: 100%;
+  display: table-row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Carousel-wrapper {
+  /* flex: 1 auto; */
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  /* display: flex; */
+  background-color: blue;
+}
